@@ -17,10 +17,23 @@ A Segurança Informática é importante para proteger **ativos** (recursos, info
 - `Predictability`: normal, como malícia humana ou bugs de software, dificultada, como danos no hardware;
 - `Severidade`: normal, como obstrução de meios de comunicação, ou catastrófica, destruição por tsunamis;
 
-## Proteção
+## Protecting a Security System
 
 Necessita de:
 
 - Definição de uma **security policy**, ou seja, quem pode fazer o quê, quando e onde;
 - Definição de **security mechanisms**, para garantir o cumprimento da security policy, como ciphering, access control and logging / monitoring;
 
+### Steps
+
+- Risk analysis;
+- Cost-benefit analysis;
+- Specification, definição da securiy policy;
+- Design, definição do security mechanism;
+- Implementation;
+- Tests;
+
+No entanto, é complexo determinar a correção de segurança do sistema e provar matematicamente que cobre todos os cenários.
+
+- `CWE` - Common Weaker Enumeration;
+- `CVE` - Common Vulnerabilities and Exposures; 
