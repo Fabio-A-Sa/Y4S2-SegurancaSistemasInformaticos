@@ -21,6 +21,6 @@ A Segurança Informática é importante para proteger **ativos** (recursos, info
 
 Necessita de:
 
-- Definição de uma **security policy**;
-- Definição de **security mechanisms**;
+- Definição de uma **security policy**, ou seja, quem pode fazer o quê, quando e onde;
+- Definição de **security mechanisms**, para garantir o cumprimento da security policy, como ciphering, access control and logging / monitoring;
 
