@@ -17,3 +17,10 @@ A Segurança Informática é importante para proteger **ativos** (recursos, info
 - `Predictability`: normal, como malícia humana ou bugs de software, dificultada, como danos no hardware;
 - `Severidade`: normal, como obstrução de meios de comunicação, ou catastrófica, destruição por tsunamis;
 
+## Proteção
+
+Necessita de:
+
+- Definição de uma **security policy**;
+- Definição de **security mechanisms**;
+
