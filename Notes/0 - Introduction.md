@@ -7,3 +7,13 @@ A Segurança Informática é importante para proteger **ativos** (recursos, info
 - `Availability`: a informação deve estar acessível / disponível às entidades, através de uma confirmação por via de um challenge custoso, para evitar ataques DDoS;
 - `Authenticity`: pode pedir autenticação para provar a identificação da entidade;
 
+## Threats and Attacks classification
+
+**Threat** é o risco ou possibilidade da ocorrência de um eventual problema de segurança no futuro. Já o **attack** ou ocorrência e concretização da threat, normalmente de forma deliberada. Podem ser classificados em diversos tipos:
+
+- `Intenção`: nenhuma, através de erros de hardware, ou de propósito;
+- `Origem`: internal, external;
+- `Operation mode`: passiva, através de inferência ou leitura de documentos expostos, activa quando se trata de vírus, por exemplo;
+- `Predictability`: normal, como malícia humana ou bugs de software, dificultada, como danos no hardware;
+- `Severidade`: normal, como obstrução de meios de comunicação, ou catastrófica, destruição por tsunamis;
+
