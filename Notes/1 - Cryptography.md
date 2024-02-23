@@ -27,3 +27,8 @@ Usadas para longos conjuntos de texto, que são processados em bloco:
 
 ### On the purpose
 
+- `Bidirecional`: simétrica (confidencialidade) ou assimétrica (autenticação e confidencialidade); 
+- `Unidirecional`: para autenticação e integridade;
+
+## Criptographic Keys
+
