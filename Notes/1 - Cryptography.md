@@ -32,3 +32,4 @@ Usadas para longos conjuntos de texto, que são processados em bloco:
 
 ## Criptographic Keys
 
+Next class
