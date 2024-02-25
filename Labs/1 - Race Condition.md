@@ -104,3 +104,10 @@ We can run both programs in parallel in order to catch the expected result.
 
 ## Improved Attack Method
 
+In the previous task most of our attempts didn't work because our attack program, running with no root privilege could not make changes to the root owned /tmp/XYZ file.
+
+Using unlink() and symlink() approach gave us a race condition in our attack program which was exploited by the target program.
+
+We can solve this issue by making unlink() and symlink() atomic.
+
+According to the lab guide now our attack program should look like this:
