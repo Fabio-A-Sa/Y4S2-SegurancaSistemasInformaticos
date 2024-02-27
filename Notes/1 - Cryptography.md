@@ -51,3 +51,19 @@ Canal de comunicação criptograficamente segura entre duas entidades, permitind
 - `Integrity`: qualquer alteração dos dados trocados é detectada;
 - `Confidentiality`: os dados são entendidos apenas pelos destinatários;
 
+Chaves simétricas com longa duração são complexas e pouco seguras de manter ou trocar. Por outro lado, operações com chaves assimétricas são computacionalmente pouco eficientes. Assim, a solução mais usada é uma mistura das duas abordagens:
+
+- A partilha da chave simétrica é feita a partir de chaves assimétricas;
+- Depois da troca, as mensagens e documentos são cifrados com recurso à chave simétrica;
+
+Cifras simétricas não impedem a repudiação, pelo que se usam `MAC/MIC` (*Message Authentication or Integrity Code*):
+
+- É um hash resultante da concatenação da mensagem original com uma chave secreta;
+- Envia para o destinatário o hash e também a mensagem;
+- O receptor verifica a integridade da mensagem, usando a própria chave;
+
+Uma forma mais segura é usar o `HMAC` (*Hashed Messafge Authentication Code*), que usa a parte esquerda e direita da chave em separado, que pode ser menos eficiente em contrapartida.
+
+### Digital Signatures
+
+Next class
