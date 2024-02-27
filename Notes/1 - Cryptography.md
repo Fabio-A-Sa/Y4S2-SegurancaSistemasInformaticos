@@ -32,4 +32,22 @@ Usadas para longos conjuntos de texto, que são processados em bloco:
 
 ## Criptographic Keys
 
-Next class
+Uma chave é um conjunto de dados necessários para operações criptográficas, na sua maioria secreta, difícl de memorizar e produzida matematicamente / com recurso a algoritmos. Podem ser chaves:
+
+- `Pessoais`: para autenticação, como as public-keys, com baixa eficiência e longa longevidade;
+- `De sessão`: para confidencialidade nos canais de comunicação, como as chaves partilhadas, com alta eficiência e baixa longevidade;
+
+### Digital Certificate
+
+Documento que mapeia uma entidade a uma chave pública. Este documento é assinado por uma entidade confiável (*CA - Certificate Authority*) comum aos endpoints que poderão estar em comunicação.
+
+## Protections
+
+### Secure Channels
+
+Canal de comunicação criptograficamente segura entre duas entidades, permitindo:
+
+- `Authentication`: para uma comunicação genuína;
+- `Integrity`: qualquer alteração dos dados trocados é detectada;
+- `Confidentiality`: os dados são entendidos apenas pelos destinatários;
+
