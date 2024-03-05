@@ -66,4 +66,25 @@ Uma forma mais segura é usar o `HMAC` (*Hashed Messafge Authentication Code*), 
 
 ### Digital Signatures
 
+Ataques são possíveis quando dois ou mais digital signatures possuem o mesmo hash/fingerprint.
+
+### Distribuição de documentos de forma segura
+
+O emissor tem de enviar simultaneamente:
+
+- O documento
+- A assinatura digital do documento
+- Um digital certificate da assinatura do documento
+
+A recepção consiste na verificação da integridade do documento, com base na assinatura e do digital certificate gerado.
+
+No entanto a proteção de confidencialidade não garante necessariamente uma proteção de integridade. 
+
+
+## Criptographic Models
+
+TODO
+
+## General enciphering schemes
+
 Next class
