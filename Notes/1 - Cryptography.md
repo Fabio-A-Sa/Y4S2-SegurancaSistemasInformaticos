@@ -80,14 +80,14 @@ A recepção consiste na verificação da integridade do documento, com base na 
 
 No entanto a proteção de confidencialidade não garante necessariamente de uma forma geral uma proteção de integridade.
 
-## Attack Models
+### Attack Models
 
+Especificação do tipo de acesso o criptoanalista tem quando tenta quebrar o sistema. Pode conhecer o texto original ou apenas a cifra.
 
+### Criptographic Models
 
-## Criptographic Models
+É a descrição formal das propriedades de segurança e assumptions do sistema protegido. Aqui o sentido de `random` verdadeiro é importante, não baseado em algoritmos mas sim em algo físico ou com seeds físicas. O nível de random pode ser medido através da captura da frequência ou do cálculo da entropia teórica do output.
 
-TODO 
+### General enciphering schemes
 
-## General enciphering schemes
-
-Next class
+TODO: next class
