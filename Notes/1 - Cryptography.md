@@ -72,14 +72,13 @@ Ataques são possíveis quando dois ou mais digital signatures possuem o mesmo h
 
 O emissor tem de enviar simultaneamente:
 
-- O documento
-- A assinatura digital do documento
-- Um digital certificate da assinatura do documento
+- O documento;
+- A assinatura digital do documento;
+- Um digital certificate da assinatura do documento;
 
 A recepção consiste na verificação da integridade do documento, com base na assinatura e do digital certificate gerado.
 
-No entanto a proteção de confidencialidade não garante necessariamente uma proteção de integridade. 
-
+No entanto a proteção de confidencialidade não garante necessariamente de uma forma geral uma proteção de integridade.
 
 ## Criptographic Models
 
