@@ -80,9 +80,13 @@ A recepção consiste na verificação da integridade do documento, com base na 
 
 No entanto a proteção de confidencialidade não garante necessariamente de uma forma geral uma proteção de integridade.
 
+## Attack Models
+
+
+
 ## Criptographic Models
 
-TODO
+TODO 
 
 ## General enciphering schemes
 
