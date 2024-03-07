@@ -32,12 +32,14 @@ Then, the crucial role of `srand()` and `time()` introducing randomness and vari
 
 ## Task 2: Guessing the Key
 
-Segundo o texto, a chave foi gerada com um código semelhante ao anterior e apresenta 
-
+According to the text, the key of the file was generated with a code similar to the previous one between `2018-04-17 21:08:49` and `2018-04-17 23:08:49`. The first step will therefore be to extract all the seeds from these values, using the `date` command to print out the number of seconds between a specified time and the Epoch:
 
 ```bash
-date
+date -d "2018-04-17 21:08:49" +%s # 1524013729
+date -d "2018-04-17 23:08:49" +%s # 1524020929
 ```
+
+And then generate all possible keys within that range:
 
 ```c
 #include <stdio.h>
@@ -64,15 +66,45 @@ void main() {
 }
 ```
 
-```bash
+We store everything in a file for easier manipulation:
 
+```bash
+$ gcc -o task2.c task2
+$ ./task2 > keys.txt
 ```
 
-
+O enunciado evidencia a utilização do algoritmo. De seguida tratamos de fazer bruteforce com as seeds previamente calculadas, assim como 
 
 ```python
+from Crypto.Cipher import AES
 
+data = bytearray.fromhex('255044462d312e350a25d0d4c5d80a34')
+ciphertext = bytearray.fromhex('d06bf9d0dab8e8ef880660d2af65aa82')
+iv = bytearray.fromhex('09080706050403020100A2B2C2D2E2F2')
+
+def bruteforce(allKeys):
+    for line in allKeys:
+        key = key.rstrip('\n')
+        hexvalue = bytearray.fromhex(key)
+        cipher = AES.new(key = hexvalue, mode=AES.MODE_CBC, iv = iv)
+        guess = cipher.encrypt(data)
+        if guess == ciphertext:
+            print(f"The key is: {key}")
+            return
+
+def main():
+
+    keys = []
+    with open('keys.txt', 'r') as file:
+        keys = file.readlines()
+        file.close()
+
+    bruteforce(keys)
+
+main()
 ```
+
+
 
 ## Task 3: Measure the Entropy of Kernel
 
@@ -89,6 +121,8 @@ $ cat /dev/random | hexdump
 question
 
 ## Task 5: Get Random Numbers from /dev/urandom
+
+TODO
 
 ```bash
 $ cat /dev/urandom | hexdumps
