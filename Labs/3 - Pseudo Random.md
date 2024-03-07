@@ -73,7 +73,7 @@ $ gcc -o task2.c task2
 $ ./task2 > keys.txt
 ```
 
-O enunciado evidencia a utilização do algoritmo. De seguida tratamos de fazer bruteforce com as seeds previamente calculadas, assim como 
+The statement indicates the use of the `aes-128-cbc` algorithm. Next, we proceed to perform brute-force with the previously calculated seeds, as we already knew the values of the Initial Vector, the plaintext, and the ciphertext:
 
 ```python
 from Crypto.Cipher import AES
@@ -104,7 +104,12 @@ def main():
 main()
 ```
 
+With this, we discover the value of the key used to encrypt the document, highlighting that the use of this approach does not guarantee much security:
 
+```bash
+$ python3 task2.py
+> The key is: 95fa2030e73ed3f8da761b4eb805dfd7
+```
 
 ## Task 3: Measure the Entropy of Kernel
 
