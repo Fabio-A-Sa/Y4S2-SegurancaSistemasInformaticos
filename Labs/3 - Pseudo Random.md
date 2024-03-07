@@ -113,9 +113,18 @@ $ python3 task2.py
 
 ## Task 3: Measure the Entropy of Kernel
 
+When measuring the entropy of the kernel, using the following command:
+
 ```bash
 $ watch -n .1 cat /proc/sys/kernel/random/entropy_avail
 ```
+
+It was observed that the entropy ranged between values of approximately 3000 and 3500. The rate at which this value varies, listed in ascending order, was determined by the following inputs:
+
+1. Time;
+2. Mouse movement;
+3. Mouse click;
+4. Keyboard press;
 
 ## Task 4: Get Pseudo Random Numbers from /dev/random
 
