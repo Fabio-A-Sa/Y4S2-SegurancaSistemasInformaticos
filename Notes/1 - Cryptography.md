@@ -90,4 +90,31 @@ Especificação do tipo de acesso o criptoanalista tem quando tenta quebrar o si
 
 ### General enciphering schemes
 
-TODO: next class
+Conjunto de algoritmos e protocolos para transformar texto em cifras, de tal modo que pessoas não autorizadas não conseguem reverter a alteração. Há três tipos essenciais:
+
+- `Deterministic`: a mesma cifra é sempre criada, independentemente do texto ou da chave de entrada;
+- `Probabilistic`: diferentes cifras são quase sempre diferentes;
+- `Format preserving`: a cifra e o texto original têm o mesmo formato;
+- `Perfect secrecy`: a cifra não revela qualquer informação sobre o texto original; 
+- `Semantic Security`: a cifra pode revelar algumas informações sobre o texto original;
+- `Indistinguishable`: não é revelada qualquer informação que permita distinguir que cifra é produzida por um conjunto de textos;
+- `Malleable`: uma cifra produzida por um texto desconhecido pode ser usada em conjunto com outra cifra para decrifrar algo relacionado ao texto original;
+- `Homomorphic`: as cifras sofrem computações de modo a que, quando decifradas, têm relação com o texto original. Por exemplo RSA com módulo N;
+- `Perfect forward secrecy`: mesmo conhecendo key session, não é possível decifrar mensagens de sessões anteriores;
+
+### Long texts encipherment
+
+- `Electronic Code Book`: a mesma chave é usada para cifrar todos os blocos, o que não é bom. Pode ser paralelizado;
+- `CTR, Counter Mode`: apenas uma chave é usada, mas cada bloco faz uma transformação à chave antes de a usar, como um simples incremento, de forma a ser virtualmente diferente. Pode ser paralelizado;
+- `CFB, Cipher Feedback`: a chave de um bloco N é o output da cifra do bloco N - 1. Há sempre uma seed. Apenas o deciframento pode ser paralelizado;
+- `OFB, Output Feedback`: Não é possível paralelizar;
+- `CBC, Cipher Block Chaining`: a chave de um bloco N é o output da cifra do bloco N - 1. Há sempre uma seed. Apenas o deciframento pode ser paralelizado;
+
+### Padding
+
+Técnica usada quando o número de blocos do não é completo (bytes, por exemplo) e é importante para esconder o tamanho real do texto. Consiste em:
+
+-  preencher os blocos em branco com o número de espaços em branco que estes possuem;
+- começar e acabar em 1, fazer fill dos blocos restantes com 0;
+
+É conveniente acabar a mensagem com o número de bytes que esta possui.
