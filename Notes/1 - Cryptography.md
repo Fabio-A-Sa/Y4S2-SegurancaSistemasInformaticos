@@ -105,10 +105,20 @@ Conjunto de algoritmos e protocolos para transformar texto em cifras, de tal mod
 ### Long texts encipherment
 
 - `Electronic Code Book`: a mesma chave é usada para cifrar todos os blocos, o que não é bom. Pode ser paralelizado;
+
 - `CTR, Counter Mode`: apenas uma chave é usada, mas cada bloco faz uma transformação à chave antes de a usar, como um simples incremento, de forma a ser virtualmente diferente. Pode ser paralelizado;
+
 - `CFB, Cipher Feedback`: a chave de um bloco N é o output da cifra do bloco N - 1. Há sempre uma seed. Apenas o deciframento pode ser paralelizado;
+
+![CFB](../Images/CFB.png)
+
 - `OFB, Output Feedback`: Não é possível paralelizar;
+
+![OBF](../Images/OBF.png)
+
 - `CBC, Cipher Block Chaining`: a chave de um bloco N é o output da cifra do bloco N - 1. Há sempre uma seed. Apenas o deciframento pode ser paralelizado;
+
+![CBC](../Images/CBC.png)
 
 ### Padding
 
@@ -118,3 +128,5 @@ Técnica usada quando o número de blocos do não é completo (bytes, por exempl
 - começar e acabar em 1, fazer fill dos blocos restantes com 0;
 
 É conveniente acabar a mensagem com o número de bytes que esta possui.
+
+![Types](../Images/Types.png)
