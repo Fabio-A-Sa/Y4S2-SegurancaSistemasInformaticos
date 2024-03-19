@@ -162,11 +162,20 @@ Confidencialidade não garante integridade das mensagens trocadas, pelo que algu
 
 #### 1 - Encrypt then MAC
 
-
+Depois da encriptação, gera-se um MAC a partir desse output. Não é paralelizável, pois a encriptação é sempre posterior. São enviados a cifra e o MAC da cifra em concatenação.
 
 #### 2 - Encrypt and MAC
 
-
+Pode ser feito em paralelo, porque a encriptação e o MAC são feitos ambos através do plaintext.
 
 #### 3 - MAC then Encrypt
 
+A mensagem original é concatenada com o seu MAC, e posteriormente é tudo cifrado.
+
+### Internal combinations, "intrinsic"
+
+- Galois / Counter Mode (GCM);
+- Message Authentication Code (MAC, GHASH);
+- ChaCha20;
+- Poly1305;
+- SpongeWrap, resistente a quantum-computation;
