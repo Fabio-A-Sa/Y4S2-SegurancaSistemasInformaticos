@@ -130,3 +130,43 @@ Técnica usada quando o número de blocos do não é completo (bytes, por exempl
 É conveniente acabar a mensagem com o número de bytes que esta possui.
 
 ![Types](../Images/Types.png)
+
+## One-way cryptography
+
+Usando hash functions, que possuem características:
+
+- `One-way`: não há hipótese de voltar a ter o plaintext, a não ser por brute-force;
+- `Compression`: produz um resultado com um tamanho fixo;
+- `Collision-resistant`: dois inputs dão origem a dois outputs diferentes;
+
+Para ficheiros grandes, é necessário proceder ao hashing iterativamente, com possível adição de padding e de um bloco final que indica o comprimento do documento original.
+
+Usando brute force, o algoritmo deve ser resistente a:
+
+- 2^(n/2) - for strong collision attacks;
+- 2^n - for weak collision attacks;
+
+#### SHA-3
+
+Usa **sponge construction**: um input M é dividido em vários blocos de R bits depois da fase de padding. Depois é criado um output com a concatenação dos blocos produzidos no passo anterior. O parâmetro C (ou seja, o output é na forma 2^C), determina o grau de segurança contra collision attacks. Para o mesmo valor B = R + C, se aumentarmos R significa um menor tempo de execução (menos blocos a processar) e uma menor segurança dado o tamanho do output.
+
+## Integrity & Confidentiality protection
+
+Confidencialidade não garante integridade das mensagens trocadas, pelo que algumas verificações devem ser adicionadas:
+
+- Assinaturas
+- Fingerprints
+- Authenticated Encipherment Protolos
+
+### External combinations
+
+#### 1 - Encrypt then MAC
+
+
+
+#### 2 - Encrypt and MAC
+
+
+
+#### 3 - MAC then Encrypt
+
