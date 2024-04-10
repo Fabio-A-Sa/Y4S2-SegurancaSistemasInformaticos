@@ -13,7 +13,7 @@ O design da aplicação deve ter em atenção o `threat model`, assim como mecan
 - `Specific`: encriptação, assinaturas digitais, controlo de acessos;
 - `Pervasive`: security label, security audit trail, security recovery;
 
-#### Threat Modeling
+### Threat Modeling
 
 Com 5 passos essenciais:
 
@@ -23,5 +23,12 @@ Com 5 passos essenciais:
 - Mitigate
 - Validate
 
-A identificação de threats podem ser através da metodologia `STRIDE`. Para cada entrada identificar como os adversários podem atingir os assrts, e para cada asset a proteger, prever o que os adversários podem fazer (os seus objectivos, no fundo).
+A identificação de threats podem ser através da metodologia `STRIDE`: Spoofing, Tampering, Repudiation, Information disclosure, Denial of Service, Elevation of privilege.
 
+#### Identify Threads
+
+Para cada entrada identificar como os adversários podem atingir os assrts, e para cada asset a proteger, prever o que os adversários podem fazer (os seus objectivos, no fundo).
+
+#### Mitigate
+
+É o principal ponto do threat modeling. No entanto 
