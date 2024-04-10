@@ -40,5 +40,14 @@ Atualmente é baseada na teoria matemática e assume que os computadores ainda n
 - Weak collision resistant: brute force with 2^L;
 - Collision resistant: brute force with 2^(L/2);
 
+## Software quality versus Security
 
+Nas bases de dados do MITRE é possível ver a documentação dos ataques. Os mais comuns:
+
+- Memory corruption, without knowing the principle of least privilege or deserialização/serialization objects;
+- Input injection without checking, normalization or sanitization;
+- Concurrency, race conditions;
+- Access control;
+- Web application vulnerabilities, XSS, CSRF;
+- Poor cryptograpy;
 
