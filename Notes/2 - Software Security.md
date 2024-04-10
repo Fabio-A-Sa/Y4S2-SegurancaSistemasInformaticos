@@ -35,3 +35,10 @@ Para cada entrada identificar como os adversários podem atingir os assrts, e pa
 
 ### Cryptography
 
+Atualmente é baseada na teoria matemática e assume que os computadores ainda não são suficientemente capazes para quebrar rapidamente determinadas cifras. A library mais conhecida é o OpenSSL. 
+
+- Weak collision resistant: brute force with 2^L;
+- Collision resistant: brute force with 2^(L/2);
+
+
+
