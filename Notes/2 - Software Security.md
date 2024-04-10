@@ -23,3 +23,5 @@ Com 5 passos essenciais:
 - Mitigate
 - Validate
 
+A identificação de threats podem ser através da metodologia `STRIDE`. Para cada entrada identificar como os adversários podem atingir os assrts, e para cada asset a proteger, prever o que os adversários podem fazer (os seus objectivos, no fundo).
+
