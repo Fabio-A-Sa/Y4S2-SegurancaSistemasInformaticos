@@ -50,4 +50,3 @@ Nas bases de dados do MITRE é possível ver a documentação dos ataques. Os ma
 - Access control;
 - Web application vulnerabilities, XSS, CSRF;
 - Poor cryptograpy;
-
