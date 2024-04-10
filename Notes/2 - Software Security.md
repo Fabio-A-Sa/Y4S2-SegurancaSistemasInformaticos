@@ -31,4 +31,7 @@ Para cada entrada identificar como os adversários podem atingir os assrts, e pa
 
 #### Mitigate
 
-É o principal ponto do threat modeling. No entanto 
+É o principal ponto do threat modeling. Podemos, no limite, aceitar a vulnerabilidade no design da aplicação, pois pode ser low-risk ou custo de suporte muito elevado para a complexidade dos assets a assegurar.
+
+### Cryptography
+
