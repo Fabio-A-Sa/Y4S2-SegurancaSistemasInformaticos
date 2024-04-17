@@ -40,7 +40,7 @@ Atualmente é baseada na teoria matemática e assume que os computadores ainda n
 - Weak collision resistant: brute force with 2^L;
 - Collision resistant: brute force with 2^(L/2);
 
-## Software quality versus Security
+## Software Quality versus Security
 
 Nas bases de dados do MITRE é possível ver a documentação dos ataques. Os mais comuns:
 
@@ -50,3 +50,7 @@ Nas bases de dados do MITRE é possível ver a documentação dos ataques. Os ma
 - Access control;
 - Web application vulnerabilities, XSS, CSRF;
 - Poor cryptograpy;
+- Serialização de objectos, principalmente com keywords static and dynamic;
+- XXE (*XML External Entity*), quando dados sensíveis são transportados em XML pela web;
+- SSRF (Server Side Request Forgery);
+
