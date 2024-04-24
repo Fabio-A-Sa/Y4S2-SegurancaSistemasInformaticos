@@ -54,3 +54,6 @@ Nas bases de dados do MITRE é possível ver a documentação dos ataques. Os ma
 - XXE (*XML External Entity*), quando dados sensíveis são transportados em XML pela web;
 - SSRF (Server Side Request Forgery);
 
+### SEI
+
+SEI Coding Standards é um conjunto de regras a seguir quando programamos numa certa linguagem. 
