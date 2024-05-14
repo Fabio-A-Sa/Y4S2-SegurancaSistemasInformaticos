@@ -8,6 +8,11 @@ O HTTP protocol é stateless, mas pode ser modificado usando cookies, para auten
 
 Para melhorar a segurança, podemos usar:
 
-- PIV: Personal Identity Verification, usando smartcards;
-- SSO: single-sign-on, para autenticações federadas;
+- `PIV`: Personal Identity Verification, usando smartcards;
+- `SSO`: single-sign-on, para autenticações federadas;
+- `OAuth`: para authorization actors;
+- `OpenID`: extensão do OAuth para direct user identification;
+- `JWT`: Tokens com assinaturas;
+- `JWE`: JWT com encriptação;
+- `PoP Tokens`;
 
