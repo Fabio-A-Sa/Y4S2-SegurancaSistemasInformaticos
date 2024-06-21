@@ -17,13 +17,15 @@ This repository contains all the exercises and assessments of the UC Segurança 
 
 Notes that I take during theoretical lectures in Markdown <br>
 
-### Project
+### Project (Grade: 18.6/20)
 
-In progress
+The aim of this assignment is to develop a secure system where a trusted server provides services to client applications, used by collaborators within an organization.
 
-### Members
+#### Members
 
-In progress
+- Alexandre Nunes, up202005358
+- Fábio Sá, up202007658
+- Inês Gaspar, up202007210
 
 **@ Fábio Araújo de Sá** <br>
 **2023/2024**
