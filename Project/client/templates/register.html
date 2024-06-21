@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block header %}
+Registration Page
+{% endblock %}
+ 
+{% block content %}
+    {% if not status or status.code == 'error' %}
+        <form action="{{ url_for('routes.register') }}" method="POST">
+
+            <label for="name">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="name">One-time id:</label><br>
+            <input type="text" id="onetimeid" name="onetimeid" required><br><br>
+
+            <label for="name">Choose a password:</label><br>
+            <input type="text" id="password" name="password" required><br><br>
+
+            <input class="btn btn-primary w-100" type="submit" value="Submit">
+        </form>
+    {% endif %}
+
+    <a href="/">Back</a>
+{% endblock %}

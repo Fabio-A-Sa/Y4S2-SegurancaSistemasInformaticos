@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block header %}
+Login Page
+{% endblock %}
+ 
+{% block content %}
+    {% if not status or status.code == 'error' %}
+    <form action="{{ url_for('routes.login') }}" method="POST">
+
+        <label for="name">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="name">Password:</label><br>
+        <input type="text" id="password" name="password" required><br><br>
+
+        <input class="btn btn-primary w-100" type="submit" value="Submit">
+    </form>
+    {% endif %}
+
+    <a href="/">Back</a>
+{% endblock %}

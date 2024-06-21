@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block header %}
+Chat with {{user.username}}
+{% endblock %}
+
+{% block content %}
+
+    <form action="{{ url_for('routes.sendmessage') }}" method="POST">
+        <input hidden name="otherUser" value="{{user.username}}">
+        <input hidden name="port" value="{{user.port}}">
+        <label for="message">Message</label><br>
+        <textarea id="message" name="msg"></textarea>
+
+        <button class="btn btn-primary">Send</button>
+    </form>
+
+    <br><a href="/">Back</a>
+    
+{% endblock %}

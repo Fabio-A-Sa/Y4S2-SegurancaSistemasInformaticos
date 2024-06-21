@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block header %}
+Pre-Registration Page
+{% endblock %}
+ 
+{% block content %}
+    {% if response and not response.error %}
+    <div>
+        <p>Username: {{ response.username }}</p>
+        <p>One Time ID: {{ response.oneTimeId }}</p>
+    </div>
+    {% else %}
+    <form action="{{ url_for('routes.pre_register') }}" method="post">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="securityLevel">SecurityLevel</label><br>
+        <input type="number" id="securityLevel" name="securityLevel" required><br><br>
+        <input class="btn btn-primary w-100" type="submit" value="Submit">
+    </form>
+    {% endif %}
+
+    <a href="/">Back</a>
+{% endblock %}

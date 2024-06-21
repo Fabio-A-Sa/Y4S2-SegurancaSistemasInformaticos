@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block header %}
+Service API Result
+{% endblock %}
+
+{% block content %}
+    {% if response and not response.error %}
+        <span>Result:</span>{{ response.result }}
+    {% endif %}
+
+    <a href="/">Back</a>
+{% endblock %}

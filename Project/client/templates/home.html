@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<div class="d-flex gap-2">
+    Home Page - {{ username }}
+    <form action="{{ url_for('routes.logout') }}" method="POST">
+        <input class="btn btn-primary" type="submit" value="Logout">
+    </form>
+</div>
+{% endblock %}
+
+{% block content %}
+    <h4>Commands:</h4>
+    <form action="{{ url_for('routes.operation', op='SQUAREROOT') }}" method="post">
+        <label for="value">Value:</label>
+        <input type="number" id="value" name="value" required>
+        <button class="btn btn-primary">Square Root</button>
+    </form>
+
+    <form action="{{ url_for('routes.users') }}" method="post">
+        <button class="btn btn-primary">List users</button>
+    </form>
+
+    <button class="btn btn-primary" onclick="location.href='/messages'">List Messages</button>
+    
+    {% if security_level > 1 %}
+    <form action="{{ url_for('routes.operation', op='CUBICROOT') }}" method="post">
+        <label for="value">Value:</label>
+        <input type="number" id="value" name="value" required>
+        <button class="btn btn-primary">Cubic Root</button>
+    </form>
+    {% endif %}
+
+    {% if security_level > 2 %}
+    <form action="{{ url_for('routes.operation', op='NROOT') }}" method="post">
+        <label for="value">Value:</label>
+        <input type="number" id="value" name="value" required>
+        <label for="root">Root:</label>
+        <input type="number" id="root" name="root" required>
+        <button class="btn btn-primary">Nth Root</button>
+    </form>
+    {% endif %}
+{% endblock %}
